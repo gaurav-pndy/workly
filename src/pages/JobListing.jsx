@@ -74,7 +74,7 @@ const JobListing = () => {
   }
 
   return (
-    <div className="pb-10">
+    <div className="pb-10 px-3">
       <h1 className="gradient-title font-bold text-4xl md:text-6xl text-center pb-8">
         Jobs for you
       </h1>

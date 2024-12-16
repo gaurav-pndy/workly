@@ -28,6 +28,11 @@
 - Built with **React** and **Tailwind CSS** for a smooth user experience.
 - Optimized for desktop and mobile devices.
 
+### **Data Management:**
+
+- Utilizes Supabase for a scalable and efficient backend to store and manage user data and job listings.
+= Ensures real-time data synchronization between the frontend and backend.
+
 ### **API Integration:**
 
 - Backend APIs to handle job listings, applications, and hiring statuses.
@@ -53,6 +58,10 @@
 ### **Routing:**
 
 - **React Router**: For dynamic navigation and route management.
+
+### **Database and Backend:**
+
+- **Supabase**: A scalable backend solution for managing user data, job listings, and real-time updates.
 
 ### **API Handling:**
 
@@ -82,6 +91,7 @@
 
 - [Node.js](https://nodejs.org/) installed on your machine.
 - An account with [Clerk](https://clerk.dev/) to manage authentication.
+- A Supabase project for backend management and database storage.
 - Backend API URL (for managing job listings and applications).
 
 ### **Installation**
@@ -105,8 +115,9 @@
    - Add the following:
 
    ```env
-   VITE_CLERK_PUBLISHABLE_KEY=<your-clerk-publishable-key>
-   VITE_API_BASE_URL=<your-api-base-url>
+   VITE_CLERK_PUBLISHABLE_KEY=<your-clerk-publishable-key>  
+   VITE_SUPABASE_URL=<your-supabase-url>  
+   VITE_SUPABASE_ANON_KEY=<your-supabase-anon-key>  
    ```
 
 4. Start the development server:
@@ -115,4 +126,4 @@
    npm run dev
    ```
 
-   **For live demo, go to [workly](https://pathfinder-eight.vercel.app/)**
+   **For live demo, go to [workly](https://workly-chi.vercel.app/)**

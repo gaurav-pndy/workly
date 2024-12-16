@@ -1,0 +1,54 @@
+/* Ensure the body and html have proper scrollable height */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-y: auto;
+  scrollbar-width: none; /* For Firefox */
+  -ms-overflow-style: none;
+}
+
+body::-webkit-scrollbar {
+  display: none; /* For Chrome, Safari, and other WebKit browsers */
+}
+
+.app-wrapper {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.custom-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(
+    45deg,
+    #010221,
+    #000111 85px,
+    #00001b 8.5px,
+    #00001d 100px
+  );
+  background-color: #000016;
+  z-index: -1; /* Keep it behind content */
+}
+
+.custom-bg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, transparent, rgba(0, 0, 0, 0.9));
+  z-index: -2;
+}
+
+.content-wrapper {
+  position: relative;
+  z-index: 1; /* Ensure content is above the background */
+}
+

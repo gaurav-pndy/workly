@@ -136,11 +136,16 @@ const JobPage = () => {
         />
       )}
 
-      {job?.applications?.length > 0 && job?.recruiter_id === user?.id && (
+      {job?.recruiter_id === user?.id && (
         <div className="flex flex-col gap-1  sm:gap-3">
           <h2 className="text-2xl sm:text-3xl font-semibold">
             Received Applications
           </h2>
+          {job?.applications?.length === 0 && (
+            <div className=" flex items-center justify-center text-2xl font-semibold text-gray-700">
+              No Applications received yet !
+            </div>
+          )}
           {job?.applications.map((application) => {
             return (
               <ApplicationCard key={application.id} application={application} />

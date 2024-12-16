@@ -86,7 +86,9 @@ const JobCard = ({
 
       <CardFooter className="flex gap-2">
         <Link to={`/job/${job.id}`} className="flex-1">
-          <Button variant="apply">Apply Now</Button>
+          <Button variant="apply">
+            {job?.recruiter_id === user?.id ? "View Applications" : "Apply Now"}
+          </Button>
         </Link>
 
         {!isMyJob && (

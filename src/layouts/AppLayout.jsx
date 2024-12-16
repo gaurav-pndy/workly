@@ -8,7 +8,7 @@ const AppLayout = () => {
       <div className="custom-bg "></div>
       <div className="content-wrapper container">
         <Header />
-        <main>
+        <main className="px-3">
           <Outlet />
         </main>
       </div>

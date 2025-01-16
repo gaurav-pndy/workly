@@ -12,7 +12,7 @@ import Autoplay from "embla-carousel-autoplay";
 
 const LandingPage = () => {
   return (
-    <main className="flex flex-col gap-20 sm:gap-16 pt-5 sm:pt-16  mt-4 md:mt-0 justify-between  h-[70vh] md:h-full">
+    <main className="flex flex-col gap-20 sm:gap-16 pt-5 sm:pt-16    justify-between    md:h-full">
       <section className="text-center flex flex-col gap-10">
         <h1 className="flex flex-col items-center justify-center gradient-title text-[2.5rem] font-bold sm:text-6xl lg:text-7xl leading-snug tracking-tighter pt-4 ">
           Connecting Talent and Opportunity
@@ -52,7 +52,7 @@ const LandingPage = () => {
       </section>
 
       <Carousel
-        className="w-full py-10 -z-10"
+        className="w-full md:py-10 -z-10"
         plugins={[Autoplay({ delay: 2000 })]}
       >
         <CarouselContent className="flex gap-5 sm:gap-20 items-center">

@@ -54,7 +54,7 @@ const JobPage = () => {
   if (!isLoaded) {
     return (
       <div className=" h-[80vh] flex justify-center items-center">
-        <BeatLoader className="opacity-50" color="purple" />
+        <BeatLoader className="opacity-70" color="purple" />
       </div>
     );
   }

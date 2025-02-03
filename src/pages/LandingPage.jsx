@@ -95,9 +95,9 @@ const LandingPage = () => {
   return (
     <main
       ref={mainRef}
-      className="flex flex-col gap-20 sm:gap-16 pt-5 sm:pt-16 justify-between md:h-full"
+      className="flex flex-col gap-20 sm:gap-16 pt-5 sm:pt-16 justify-between md:h-full "
     >
-      <section className="text-center flex flex-col gap-10">
+      <section className="text-center flex flex-col gap-10 ">
         <h1
           ref={headTextRef}
           className="flex flex-col md:gap-4 items-center justify-center text-[2.5rem] font-bold sm:text-6xl lg:text-7xl leading-snug tracking-tighter  pt-4 relative "
@@ -164,24 +164,29 @@ const LandingPage = () => {
         </div>
       </section>
 
-      <Carousel
-        className="w-full md:py-10 -z-10 blur-anim"
-        plugins={[Autoplay({ delay: 2000 })]}
-      >
-        <CarouselContent className="flex gap-5 sm:gap-20 items-center">
-          {companies.map(({ name, id, path }) => {
-            return (
-              <CarouselItem key={id} className="basis-1/3 lg:basis-1/6">
-                <img
-                  src={path}
-                  alt={name}
-                  className="h-9 sm:h-14 object-contain"
-                />
-              </CarouselItem>
-            );
-          })}
-        </CarouselContent>
-      </Carousel>
+      <div className="relative overflow-hidden">
+        <div className="absolute inset-y-0 left-0 w-20 sm:w-60 bg-gradient-to-r from-black via-transparent to-transparent pointer-events-none"></div>
+        <div className="absolute inset-y-0 right-0 w-20 sm:w-60 bg-gradient-to-l from-black via-transparent to-transparent pointer-events-none"></div>
+
+        <Carousel
+          className="w-full md:py-10 -z-10 blur-anim"
+          plugins={({ loop: true }, [Autoplay({ delay: 2000 })])}
+        >
+          <CarouselContent className="flex gap-5 sm:gap-20 items-center">
+            {companies.map(({ name, id, path }) => {
+              return (
+                <CarouselItem key={id} className="basis-1/3 lg:basis-1/6">
+                  <img
+                    src={path}
+                    alt={name}
+                    className="h-9 sm:h-14 object-contain"
+                  />
+                </CarouselItem>
+              );
+            })}
+          </CarouselContent>
+        </Carousel>
+      </div>
     </main>
   );
 };

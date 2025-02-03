@@ -23,9 +23,9 @@ function App() {
         {
           path: "/onboarding",
           element: (
-            <PrivateRoute>
-              <Onboarding />
-            </PrivateRoute>
+            // <PrivateRoute>
+            <Onboarding />
+            // </PrivateRoute>
           ),
         },
         {

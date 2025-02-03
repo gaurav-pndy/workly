@@ -59,13 +59,16 @@
 
 @layer utilities {
   .gradient {
-    @apply bg-gradient-to-br from-gray-400 via-gray-200 to-white;
+    background-image: linear-gradient(to right, #9ca3af, #e5e7eb );
+    background-size: 100% 100%;
   }
 
   .gradient-title {
-    @apply gradient text-transparent bg-clip-text;
+    @apply text-transparent bg-clip-text;
+    background-image: linear-gradient(to right, #9ca3af, #e5e7eb ); 
   }
 }
+
 
 @layer base {
   * {

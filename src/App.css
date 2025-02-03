@@ -52,3 +52,49 @@ body::-webkit-scrollbar {
   z-index: 1; /* Ensure content is above the background */
 }
 
+
+
+
+.shining-text {
+  position: relative;
+  color: #b7b5f2; /* Silverish white */
+  text-shadow: 0 0 0px rgba(255, 255, 255, 0.8), 0 0 20px rgba(123, 127, 247, 0.6);
+}
+
+/* Twinkling silver stars */
+.twinkle-star {
+  position: absolute;
+  /* font-size: 0.6rem; */
+  color: rgb(240, 240, 240); /* Silverish white */
+  opacity: 0;
+  animation: twinkle-animation 1.5s infinite ease-in-out alternate;
+}
+
+@keyframes twinkle-animation {
+  0% {
+    opacity: 0.2;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1.5);
+  }
+}
+/* Shimmer effect on "Opportunity" */
+.shimmer-text {
+  background-image: linear-gradient(90deg, #ffffff 0%, #ffd700 50%, #ffffff 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  /* display: inline-block; */
+  animation: shimmer-animation 2s infinite linear;
+}
+
+@keyframes shimmer-animation {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 200%;
+  }
+}

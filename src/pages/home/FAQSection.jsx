@@ -65,10 +65,7 @@ const FAQSection = () => {
   };
 
   return (
-    <section
-      id="faq"
-      className="py-5 md:py-16 px-2 md:px-6 max-w-7xl  text-white"
-    >
+    <section id="faq" className="py-5 md:py-16 px-2 md:px-6   text-white ">
       <div className="mx-auto">
         <h2 className="text-3xl sm:text-5xl font-bold gradient-title h-12 md:h-16 w-fit mx-auto mb-8 hidden md:block">
           Frequently Asked Questions

@@ -72,14 +72,14 @@ const ForCustomer = () => {
   }, []);
 
   return (
-    <section className="py-5 md:py-16 px-3 md:px-0 max-w-7xl flex flex-col gap-20 md:gap-40 mx-auto">
+    <section className="py-5 md:py-16 px-3 md:px-0  flex flex-col gap-20 md:gap-40 mx-auto">
       {sections.map((section, index) => (
         <div
           key={section.id}
           ref={(el) => (sectionRefs.current[index] = el)}
-          className={`group  flex  flex-col-reverse md:flex-row${
-            section.reverse ? "-reverse" : ""
-          } items-center gap-8 md:gap-12 transition-all duration-300 hover:transform hover:-translate-y-2`}
+          className={`group  flex  flex-col-reverse ${
+            section.reverse ? "md:flex-row-reverse" : "md:flex-row"
+          } items-center gap-8 md:gap-12 transition-all duration-300 hover:transform hover:-translate-y-2 `}
         >
           <div className="w-full  md:w-1/2 md:px-4 lg:pl-12">
             <h2 className="  flex flex-col text-3xl sm:text-5xl font-bold gradient-title  gap-1 md:gap-3">

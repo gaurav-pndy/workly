@@ -4,17 +4,22 @@ import {
   CarouselContent,
   CarouselItem,
 } from "@/components/ui/carousel";
-import companies from "../data/companies.json";
+import companies from "../../data/companies.json";
 import React, { useRef } from "react";
 import { Link } from "react-router-dom";
 import Autoplay from "embla-carousel-autoplay";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { TextPlugin } from "gsap/all";
+import Features from "./Features";
+import ForCustomer from "./ForCustomer";
+import Testimonials from "./Testimonials";
+import FAQSection from "./FAQSection";
+import Footer from "./Footer";
 
 gsap.registerPlugin(TextPlugin);
 
-const LandingPage = () => {
+const Hero = () => {
   const mainRef = useRef();
   const headTextRef = useRef();
   const connectRef = useRef();
@@ -187,8 +192,13 @@ const LandingPage = () => {
           </CarouselContent>
         </Carousel>
       </div>
+      <Features />
+      <ForCustomer />
+      <Testimonials />
+      <FAQSection />
+      <Footer />
     </main>
   );
 };
 
-export default LandingPage;
+export default Hero;

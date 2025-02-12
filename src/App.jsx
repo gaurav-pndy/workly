@@ -1,7 +1,7 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./App.css";
 import AppLayout from "./layouts/AppLayout";
-import LandingPage from "./pages/LandingPage";
+
 import Onboarding from "./pages/Onboarding";
 import JobListing from "./pages/JobListing";
 import JobPage from "./pages/JobPage";
@@ -10,6 +10,7 @@ import SavedJobs from "./pages/SavedJobs";
 import PostJob from "./pages/PostJob";
 import { ThemeProvider } from "./components/ui/theme-provider";
 import PrivateRoute from "./components/PrivateRoute";
+import Hero from "./pages/home/Hero";
 
 function App() {
   const router = createBrowserRouter([
@@ -18,7 +19,7 @@ function App() {
       children: [
         {
           path: "/",
-          element: <LandingPage />,
+          element: <Hero />,
         },
         {
           path: "/onboarding",
